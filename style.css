@@ -1,0 +1,170 @@
+body{
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #f2f2f2;
+}
+
+/* Selector por agrupamiento */
+h1, h2, h3{
+    font-family: Georgia, serif;
+    color: #e0b527;
+}
+
+header{
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    text-align: center;
+}
+
+nav ul{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    background-color: transparent;
+}
+
+nav a{
+    color: #f2f2f2;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: #d4af37;
+}
+
+main{
+    padding: 20px;
+    background-color: #181717;
+}
+
+section{
+    margin-bottom: 20px;
+}
+
+/* Selector por id: solo la sección de películas queda en fila */
+#peliculas{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.dato-curioso{
+    background-color: #333333;
+    padding: 15px 20px;
+    max-width: 600px;
+    border-left: 5px solid #d4af37;
+    margin: 20px auto;
+    font-style: italic;
+}
+
+.titulo-seccion{
+    text-align: center;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #d4af37;
+    max-width: 300px;
+    margin: 0 auto 30px auto;
+    transition: letter-spacing 0.3s ease, color 0.3s ease;
+    cursor: pointer;
+}
+
+.titulo-seccion:hover{
+    color: #d4af37;
+    letter-spacing: 4px;
+}
+
+/* Selector por id: trailers en columna, uno debajo del otro */
+#trailers{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+.video-container{
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.video-container:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #d4af37;
+}
+
+
+/* Selector por clase: tarjeta de cada película */
+.tarjeta-pelicula{
+    background-color: #302e2e;
+    border: 1px solid #f0c945;
+    padding: 15px;
+    width: 250px;
+    text-align: center;
+}
+
+.tarjeta-pelicula img{
+    width: 100%;
+    height: auto;
+}
+
+/* Selector por clase: precio destacado */
+.precio{
+    color: #d4af37;
+    font-weight: bold;
+}
+
+footer{
+    background-color: rgba(0, 0, 0, 0.85);
+    padding: 20px;
+    text-align: center;
+}
+
+footer input, footer textarea{
+    display: block;
+    margin: 10px auto;
+    padding: 8px;
+    width: 80%;
+    max-width: 400px;
+}
+
+/*saco el borde de los inputs y textarea al hacer focus y cambio el color que pone el navegador por defectoa dorado*/
+footer input:focus, footer textarea:focus{
+    border-color: #d4af37;
+    outline: none;
+    border: 2px solid #d4af37;
+}
+
+footer button{
+    background-color: #d4af37;
+    letter-spacing: 2px;
+    color: #060505;
+    border-radius: 5px;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+}
+
+@media (max-width: 600px){
+    nav ul{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #peliculas{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .tarjeta-pelicula{
+        width: 90%;
+    }
+
+    .video-container iframe{
+        width: 100%;
+        height: auto;
+    }
+}
